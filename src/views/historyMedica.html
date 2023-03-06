@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/historyMedica.css">
+    <title>Crear - historia medica</title>
+</head>
+<body>
+     <div id="page" class="site">
+        <div class="container">
+            <div class="form-box">
+                <div class="progress">
+                    <div class="logo"><a href="/"><span>.Do</span>ctus</a></div>
+                    <ul class="progress-steps">
+                        <li class="step active">
+                            <span>1</span>
+                            <p>Motivo<br><span>25 secs to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span>2</span>
+                            <p>Personal<br><span>60 secs to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span>3</span>
+                            <p>Enfermedades<br><span>30 secs to complete</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <form action="#">
+                    <!--Formulario one-->
+                    <div class="form-one form-step active">
+                        <div class="bg-svg"></div>
+                        <h2>Motivo</h2>
+                        <p>Ingrese el motivo de consulta correctamente!🩺</p>
+                        <div>
+                            <label>Motivo de consulta</label>
+                            <input type="text" placeholder="e.g. Paul">
+                        </div>
+                        <div class="bg-svg">
+                            <label>Enfermedad actual</label>
+                               <input type="text">
+                        </div>
+
+                        <div class="bg-svg">
+                            <label>Diagnostico presuntivo</label>
+                               <input type="text">
+                        </div>
+
+                        <div>
+                            <label>Tratamiento hospitalario</label>
+                            <input type="text" placeholder="Ejemplo: Coctel multivitaminico, Meropene, etc..">
+                        </div>
+                    </div>
+                     
+                    <!--Formulario two-->
+                    <div class="form-two form-step">
+                        <div class="bg-svg"></div>
+                        <h2>Contact</h2>
+                        <div>
+                            <label>Phone</label>
+                            <input type="tel" placeholder="+62xxxxxx">
+                        </div>
+
+                        <div>
+                            <label>Adress</label>
+                            <input type="text" placeholder="Street address">
+                        </div>
+
+                        <div>
+                            <input type="text" placeholder="App, Suite, Building">
+                        </div>
+
+                        <div>
+                            <label>City</label>
+                            <input type="text" placeholder="City">
+                        </div>
+
+                        <div>
+                            <label>State</label>
+                            <input type="text" placeholder="State/province">
+                        </div>
+
+                        <div>
+                            <label>Zip Code</label>
+                            <input type="text" placeholder="Postal/Zip Code">
+                        </div>
+                        
+                        <div>
+                            <label>Country</label>
+                            <select name="country" id="country">
+                                <option value="">Please select</option>
+                                <option value="Afganistan">Afganistan</option>
+                            </select>
+                        </div>
+
+                        <!--form Three-->
+
+                        <div class="form-three form-step">
+                           <div class="bg-svg"></div>
+                           <h2>Security</h2>
+                           <div>
+                            <label for="">Email</label>
+                            <input type="email" placeholder="your email address">
+                           </div>
+
+                           <div>
+                            <label for="">Username</label>
+                            <input type="email" placeholder="your email address">
+                           </div>
+
+                           <div>
+                            <label for="">Password</label>
+                            <input type="email" placeholder="your email address">
+                           </div>
+
+                           <div>
+                            <input type="email" placeholder="your email address">
+                           </div>
+
+                           <div class="checkbox">
+                            <input type="email" placeholder="your email address">
+                            <label for="">Receive our news letter and special offers</label>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-prev" disabled>Back</button>
+                        <button class="btn-next">Next step</button>
+                        <button class="btn-submit">Crear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+     </div>
+     
+    <script src="./js/controllers/historyMedica/historyMedica.js"></script>
+</body>
+</html>
