@@ -15,7 +15,7 @@ btnLogin.addEventListener('click',(e)=>{
   }
   console.log(obj)
   
-   ipcRenderer.invoke('login', obj)
+   io.emit('login', obj)
 
    Swal.fire({
     icon: 'error',
@@ -25,3 +25,17 @@ btnLogin.addEventListener('click',(e)=>{
   })
 }
 )
+
+
+const io = require('socket.io')();
+io.listen(8000);
+
+io.on('connection', (client) => {
+  io.emit('welcome');
+
+  client.on("test", () => {
+    console.log("received test"); // not displayed
+    io.emit("ok", keiber = {hola:'keiber'}
+    );
+  })
+});

@@ -4,6 +4,26 @@ const path = require('path');
 
 // --Ventanas--
 
+const io = require('socket.io-client');
+ var socket = io("http://localhost:8000");
+
+socket.on('welcome', () => {
+console.log('welcome received'); // displayed
+  socket.emit('test')
+ });
+ socket.on('error', (e) => {
+  console.log(e); // not displayed
+});
+  socket.on('ok', (e) => {
+    console.log(e)
+   console.log("OK received"); // not displayed
+ });
+ socket.on('connect', () => {
+  console.log("connected"); // displayed
+  socket.emit('test');
+});
+
+
 
 //(1)Ventana principal login
 let winLogin;
@@ -52,10 +72,11 @@ const createHistoryMedica = ()=>{
 // ---Middlewares--
 
 // (1)Recibir el objeto de los input login para el query
-ipcMain.handle('login', (event, obj) => {
-    console.log(obj)
-    validatelogin(obj)
-  });
+socket.on('login',(obj)=>{
+  console.log(obj)
+  validatelogin(obj)
+  socket.emit('info', 'informacion guardada')
+})
 
 // (2)Recibir el objeto de los input usuarios para el query 
 ipcMain.handle('User:Data', (event,datosUsuario)=>{
