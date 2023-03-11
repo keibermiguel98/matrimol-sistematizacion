@@ -73,7 +73,7 @@ const createHistoryMedica = ()=>{
 
 // (1)Recibir el objeto de los input login para el query
 socket.on('login',(obj)=>{
-  console.log(obj)
+  console.log('Inicio de session',obj)
   validatelogin(obj)
   socket.emit('info', 'informacion guardada')
 })
@@ -141,7 +141,7 @@ function VentanaHostoryMedica(){
 
   function getUsuarios(){
     sql = 'SELECT * FROM usuarios';
-    db.query(sql,(error, results,field )=>{
+    db.query(sql,(error, results )=>{
       if(error){
         console.log(error)
         console.log('ocurrio un error al consultar usuario')
