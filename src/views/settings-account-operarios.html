@@ -339,13 +339,12 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Maestros /</span> Operadores / Datos</h4>
-
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Maestros /</span> <span class="text-muted fw-light">Operadores /</span> Formulario</h4>
               <div class="row">
                 <div class="col-md-12">
                
                   <div class="card mb-4">
-                    <h5 class="card-header">Perfil operadores</h5>
+                    <h5 class="card-header">Formulario operadores</h5>
                     <!-- Account -->
                     <div class="card-body">
                       <div class="d-flex align-items-start align-items-sm-center gap-4">
@@ -382,56 +381,9 @@
                     <div class="card-body">
                       <form id="formAccountSettings" action="#">
                         <div class="row">
-                          <div class="mb-3 col-md-6">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input
-                              class="form-control"
-                              type="text"
-                              id="nombre"
-                              name="nombre"
-                              placeholder="Example: Miguel"
-                              autofocus
-                            />
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="apellido" class="form-label">Apellido</label>
-                            <input class="form-control" 
-                            type="text"
-                            name="apellido"
-                            id="apellido" 
-                            placeholder="Example: Rodriguez"/>
-                          </div>
 
                           <div class="mb-3 col-md-6">
-                            <label for="nombreusuario" class="form-label">Nombre de usuario</label>
-                            <input
-                              class="form-control"
-                              type="text"
-                              id="nombreusuario"
-                              name="nombreusuario"
-                              placeholder="miguelrojas@example.com"
-                            />
-                          </div>
-                        
-
-                          <div class="form-password-toggle  mb-3 col-md-6">
-                            <label class="form-label" for="contraseña">contraseña</label>
-                            <div class="input-group">
-                              <input
-                                type="password"
-                                class="form-control"
-                                id="contrasena"
-                                placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                aria-describedby="basic-default-password2"
-                              />
-                              <span id="basic-default-password2" class="input-group-text cursor-pointer"
-                                ><i class="bx bx-hide"></i
-                              ></span>
-                            </div>
-                          </div>
-
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="key">Identificacion</label>
+                            <label class="form-label" for="identificacion">Identificacion</label>
                             <div class="input-group">
                             <button
                               class="btn btn-outline-primary dropdown-toggle"
@@ -455,41 +407,41 @@
                           </div>
                           </div>
 
-                          
                           <div class="mb-3 col-md-6">
-                            <label class="form-label" for="key">Key</label>
-                            <div class="input-group input-group-merge">
-                              <span class="input-group-text">🔑</span>
-                              <input
-                                type="text"
-                                id="key"
-                                name="key"
-                                class="form-control"
-                                placeholder="202 555 0111"
-                              />
-                            </div>
-                          </div>
-                          
-
-                          <div class="mb-3 col-md-6">
-                            <label for="rol" class="form-label">Roles</label>
-                            <select id="rol" class="form-select">
-                              <option>Seleccionar</option>
-                              <option value="Administrador">Administrador</option>
-                              <option value="Jefe de Planta">Jefe de planta</option>
-                              <option value="Planta">Planta</option>
-                            </select>
+                            <label for="alias" class="form-label">Alias</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="alias"
+                              name="alias"
+                              placeholder="Ejemplo: Operador 1"
+                              autofocus
+                            />
                           </div>
 
+
                           <div class="mb-3 col-md-6">
-                            <label for="status" class="form-label">Status</label>
-                            <input 
-                             class="form-control"  
-                             type="text" 
-                             id="status" 
-                             name="status" 
-                             placeholder="" />
-                          </div>  
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="nombre"
+                              name="nombre"
+                              placeholder="Ejemplo: Miguel"
+                              autofocus
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input class="form-control" 
+                            type="text"
+                            name="apellido"
+                            id="apellido" 
+                            placeholder="Example: Rodriguez"/>
+                          </div>
+
+      
+                          
                         </div>
 
                         <div class="mt-2">

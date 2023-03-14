@@ -340,13 +340,13 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Maestros /</span> Empresa / Datos</h4>
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Maestros /</span> <span class="text-muted fw-light">Empresa/</span> Formulario</h4>
 
               <div class="row">
                 <div class="col-md-12">
                
                   <div class="card mb-4">
-                    <h5 class="card-header">Empresa</h5>
+                    <h5 class="card-header">Formulario Empresa</h5>
                     <!-- Account -->
                     <div class="card-body">
                       <div class="d-flex align-items-start align-items-sm-center gap-4">
@@ -384,113 +384,36 @@
                       <form id="formAccountSettings" action="#">
                         <div class="row">
                           <div class="mb-3 col-md-6">
-                            <label for="nombre" class="form-label">Nombre</label>
+                            <label for="descripcion" class="form-label">Descripcion</label>
                             <input
                               class="form-control"
                               type="text"
-                              id="nombre"
-                              name="nombre"
-                              placeholder="Example: Miguel"
+                              id="descripcion"
+                              name="descripcion"
+                              placeholder="Example: Matrimol SAS"
                               autofocus
                             />
                           </div>
                           <div class="mb-3 col-md-6">
-                            <label for="apellido" class="form-label">Apellido</label>
+                            <label for="nit" class="form-label">NIT</label>
                             <input class="form-control" 
                             type="text"
-                            name="apellido"
-                            id="apellido" 
-                            placeholder="Example: Rodriguez"/>
+                            name="nit"
+                            id="nit" 
+                            placeholder="Example: NIT 4231313213"/>
                           </div>
 
-                          <div class="mb-3 col-md-6">
-                            <label for="nombreusuario" class="form-label">Nombre de usuario</label>
+                          <div class="mb-3 col-md-12">
+                            <label for="direccion" class="form-label">Direccion</label>
                             <input
                               class="form-control"
                               type="text"
-                              id="nombreusuario"
-                              name="nombreusuario"
-                              placeholder="miguelrojas@example.com"
+                              id="direccion"
+                              name="direccion"
+                              placeholder="ejemplo Bogota - Toberin, Av 32, calle 8, carrera 56"
                             />
                           </div>
-                        
 
-                          <div class="form-password-toggle  mb-3 col-md-6">
-                            <label class="form-label" for="contraseña">contraseña</label>
-                            <div class="input-group">
-                              <input
-                                type="password"
-                                class="form-control"
-                                id="contrasena"
-                                placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                aria-describedby="basic-default-password2"
-                              />
-                              <span id="basic-default-password2" class="input-group-text cursor-pointer"
-                                ><i class="bx bx-hide"></i
-                              ></span>
-                            </div>
-                          </div>
-
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="key">Identificacion</label>
-                            <div class="input-group">
-                            <button
-                              class="btn btn-outline-primary dropdown-toggle"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              Seleccionar
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="javascript:void(0);">CEDULA</a></li>
-                              <li><a class="dropdown-item" href="javascript:void(0);">NIT</a></li>
-                              <li><a class="dropdown-item" href="javascript:void(0);">CIF</a></li>
-                              <li><a class="dropdown-item" href="javascript:void(0);">PASAPORTE</a></li>
-                            </ul>
-                            
-                            <input type="text" 
-                            class="form-control" 
-                            id="identificacion"
-                            aria-label="Text input with dropdown button" />
-                          </div>
-                          </div>
-
-                          
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="key">Key</label>
-                            <div class="input-group input-group-merge">
-                              <span class="input-group-text">🔑</span>
-                              <input
-                                type="text"
-                                id="key"
-                                name="key"
-                                class="form-control"
-                                placeholder="202 555 0111"
-                              />
-                            </div>
-                          </div>
-                          
-
-                          <div class="mb-3 col-md-6">
-                            <label for="rol" class="form-label">Roles</label>
-                            <select id="rol" class="form-select">
-                              <option>Seleccionar</option>
-                              <option value="Administrador">Administrador</option>
-                              <option value="Jefe de Planta">Jefe de planta</option>
-                              <option value="Planta">Planta</option>
-                            </select>
-                          </div>
-
-                          <div class="mb-3 col-md-6">
-                            <label for="status" class="form-label">Status</label>
-                            <input 
-                             class="form-control"  
-                             type="text" 
-                             id="status" 
-                             name="status" 
-                             placeholder="" />
-                          </div>  
                         </div>
 
                         <div class="mt-2">
@@ -513,69 +436,13 @@
                     </div>
                     <!-- /Account -->
                   </div>
-                  <div class="card">
-                    <h5 class="card-header">Eliminar</h5>
-                    <div class="card-body">
-                      <div class="mb-3 col-12 mb-0">
-                        <div class="alert alert-warning">
-                          <h6 class="alert-heading fw-bold mb-1">Esta usted seguro que desea eliminar esta cuenta?</h6>
-                          <p class="mb-0">Al eliminar esta cuenta no hay vuelta atras, por favor verifique.</p>
-                        </div>
-                      </div>
-                      <form id="formAccountDeactivation" onsubmit="return false">
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="accountActivation"
-                            id="accountActivation"
-                          />
-                          <label class="form-check-label" for="accountActivation"
-                            >Confirmo la desactivacion de esta cuenta!</label
-                          >
-                        </div>
-                        <button type="submit" class="btn btn-danger deactivate-account">Desactivar</button>
-                      </form>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
             <!-- / Content -->
 
             <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                <div class="mb-2 mb-md-0">
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">Keiber Rodriguez</a>
-                </div>
-                <div>
-                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                  <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Documentation</a
-                  >
-
-                  <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Support</a
-                  >
-                </div>
-              </div>
-            </footer>
-            <!-- / Footer -->
-
+           
             <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->
@@ -603,7 +470,7 @@
     <script src="../assets/js/main.js"></script>
     
        <!--Controlador de datos JS -->
-       <script src="./js/Controllers/cuentaUsuarios/account-users.js"></script>
+       <script src="./js/Controllers/empresa/account-empresa.js"></script>
 
   </body>
 </html>

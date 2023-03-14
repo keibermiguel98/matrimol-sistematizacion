@@ -27,13 +27,16 @@ btnGuardar.addEventListener('click', (e)=>{
         eliminado: 0,
         created_at: new Date
     }
+
+    console.log(datosUsuario)
+   
+
     Swal.fire({
         icon: 'success',
         title: '¡Felicidades!',
         text: 'Los datos fueron almacenados  exitosamente!'
       })
-    console.log(datosUsuario)
-    window.location.pathname = './src/views/tables-usuario.html'
+      window.location.pathname = './src/views/tables-usuario.html'
 
     ipcRenderer.invoke('User:Data', datosUsuario)
 })

@@ -1,5 +1,12 @@
-const {ipcRenderer} = require('electron')
 const Swal = require('sweetalert2')
+
+const io = require('socket.io-client');
+const socket = io(`http://localhost:${process.env.SOCKET_PORT}`);
+
+
+socket.on('connect', () => {
+  console.log("connected sockeio"); 
+});
 
 
 username = document.querySelector("#username");
@@ -15,7 +22,7 @@ btnLogin.addEventListener('click',(e)=>{
   }
   console.log(obj)
   
-   io.emit('login', obj)
+   socket.emit('login', obj)
 
    Swal.fire({
     icon: 'error',
@@ -27,15 +34,4 @@ btnLogin.addEventListener('click',(e)=>{
 )
 
 
-const io = require('socket.io')();
-io.listen(8000);
 
-io.on('connection', (client) => {
-  io.emit('welcome');
-
-  client.on("test", () => {
-    console.log("received test"); // not displayed
-    io.emit("ok", keiber = {hola:'keiber'}
-    );
-  })
-});
